@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 // import Container from "../../Components";
 import AppBar from "./Components/AppBar/AppBar"
 import './App.css';
