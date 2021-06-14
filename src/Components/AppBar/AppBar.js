@@ -63,9 +63,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
   const classes = useStyles();
-
+  
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -86,12 +86,13 @@ export default function SearchAppBar() {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Search by book title…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
+              onChange={props.input}
             />
           </div>
         </Toolbar>
