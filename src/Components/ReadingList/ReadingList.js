@@ -13,7 +13,12 @@ function readingList({ books }){
     return (
         <section>
             {/* { getBooks() } */}
-           <h4>Title    Author</h4>
+           <table>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+            </tr>
+            </table>
            <ol>
                {books.map(book => <Book title={book.title} author={book.author} key={book.id}/>)}
            </ol>
