@@ -1,5 +1,6 @@
 // import Container from "../../Components";
-import AppBar from "./Components/AppBar/AppBar"
+import AppBar from "./Components/AppBar/AppBar";
+import ReadingList from "./Components/ReadingList/ReadingList";
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <main>
         <AppBar/> 
+        <ReadingList/>
       </main>
     </div>
   );
