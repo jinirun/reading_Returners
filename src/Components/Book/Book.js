@@ -6,9 +6,9 @@ export default function Book({title, author}){
             <tr>
                 <td> { title } </td>
                 <td> { author } </td> 
-                <td> <button className="button">Add</button> </td>
-                <td> <button className="button">Delete</button> </td>
-                <td> <button className="button">Review</button> </td>
+                <td> <button className="button">Add</button> 
+                 <button className="button">Delete</button> 
+                 <button className="button">Review</button> </td>
             </tr>
         // <li className="book--list">
         //     {title}

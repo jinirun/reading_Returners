@@ -1,4 +1,5 @@
 import React from 'react';
+import './ReadingList.css';
 import Header from "../Header/Header";
 import Book from "../Book/Book";
 import axios from 'axios';
@@ -13,12 +14,14 @@ function readingList({ books }){
     return (
         <section>
             {/* { getBooks() } */}
-           <table>
+           {/* <table>
             <tr>
                 <th>Title</th>
                 <th>Author</th>
             </tr>
-            </table>
+            </table> */}
+            <th className="th">Title</th>
+            <th>Author</th>
            <ol>
                {books.map(book => <Book title={book.title} author={book.author} key={book.id}/>)}
            </ol>
