@@ -7,6 +7,7 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,7 +66,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchAppBar(props) {
   const classes = useStyles();
-  
+
+  // function to get book list from Google Books API
+  function getSearch(props){
+    axios
+      .get("https://www.googleapis.com/books/v1/volumes?q=intitle:and%20then%20there%20were%20none")
+      .then(response => console.log(response.data))
+      .catch(error => console.log(error));
+  }
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -92,7 +101,8 @@ export default function SearchAppBar(props) {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
-              onChange={props.input}
+              //onSubmit={getSearch(props.input)}
+              onChange={ console.log("in search")}
             />
           </div>
         </Toolbar>
