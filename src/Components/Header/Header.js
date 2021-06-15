@@ -68,7 +68,7 @@ export default function SearchAppBar(props) {
   const classes = useStyles();
 
   // function to get book list from Google Books API
-  function getSearch(props){
+  function getBooks(props){
     axios
       .get("https://www.googleapis.com/books/v1/volumes?q=intitle:and%20then%20there%20were%20none")
       .then(response => console.log(response.data))
@@ -101,7 +101,7 @@ export default function SearchAppBar(props) {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
-              //onSubmit={getSearch(props.input)}
+              //onSubmit={getBooks(props.input)}
               onChange={ console.log("in search")}
             />
           </div>
