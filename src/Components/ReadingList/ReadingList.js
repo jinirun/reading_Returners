@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Book from "../Book/Book";
 import axios from 'axios';
 
-function readingList(){ 
+function readingList({ books }){ 
     function getBooks(props){
         axios
           .get("https://www.googleapis.com/books/v1/volumes?q=intitle:and%20then%20there%20were%20none")
@@ -12,10 +12,10 @@ function readingList(){
     }
     return (
         <section>
-            { getBooks() }
-           <h2>Title    Author</h2>
+            {/* { getBooks() } */}
+           <h4>Title    Author</h4>
            <ol>
-               {/* <Book/> */}
+               {books.map(book => <Book title={book.title} author={book.author} key={book.id}/>)}
            </ol>
         </section>
     )
