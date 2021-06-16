@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <main> 
+      <main className="display--books"> 
         <ReadingList books={ books }/>
       </main>
     </div>

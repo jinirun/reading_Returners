@@ -14,14 +14,6 @@ function readingList({ books }){
     return (
         <section>
             {/* { getBooks() } */}
-           {/* <table>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-            </tr>
-            </table> */}
-            <th className="th">Title</th>
-            <th>Author</th>
            <ol>
                {books.map(book => <Book title={book.title} author={book.author} key={book.id}/>)}
            </ol>
