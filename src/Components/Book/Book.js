@@ -5,10 +5,10 @@ export default function Book({title, author}){
         <li className="book--list">
             <div class="row">
                 <div class="column">
-                    {title}
+                    <b> {title} </b>
                 </div>
                 <div class="column">
-                    {author}
+                    <b>Author: </b> {author}
                 </div>
                 <br></br>
                 <div class="column">
